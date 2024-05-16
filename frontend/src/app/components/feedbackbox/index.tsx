@@ -6,9 +6,9 @@ interface FeedbackBoxProps {
     location: string;
     name: string;
     profession: string;
-    index: number
+    key: number
 }
-const FeedbackBox = ({ message, location, name, profession , index}: FeedbackBoxProps) => {
+const FeedbackBox = ({ message, location, name, profession , key}: FeedbackBoxProps) => {
     return (
         <>
             <Container>

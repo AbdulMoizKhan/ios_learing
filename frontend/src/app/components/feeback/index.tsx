@@ -58,7 +58,7 @@ const Feedback = () => {
         <>
             {feedbackMap.map((item, index) => (
                 <FeedbackBox
-                    index={index}
+                    key={index}
                     name={item.name}
                     profession={item.profession}
                     location={item.location}
