@@ -92,7 +92,7 @@ export const Carousal = ({ type }: CarousalProps) => {
   return (
     <div style={{ backgroundColor: '#1a1a1a', height: '400px', cursor: 'pointer' }}>
       <Box sx={{ paddingTop: '20px', height: '100%' }} >
-        <Typography align="center" variant="h4" sx={{ fontWeight: '700', paddingBottom: '30px' }}>{type === "youtube" ? "Course Insights" :  "Articles"}</Typography>
+        <Typography align="center" variant="h4" sx={{ fontWeight: '700', paddingBottom: '30px' }}>{type === "youtube" ? "Course Insights" : "Articles"}</Typography>
 
         <Swiper
           centeredSlides={true}
@@ -124,9 +124,10 @@ export const Carousal = ({ type }: CarousalProps) => {
             },
           }}
         >
-          {type === "youtube" && sliderArr.map((slider) => (
-            <SwiperSlide>
+          {type === "youtube" && sliderArr.map((slider, index) => (
+            <SwiperSlide key={index}>
               <CardsService
+
                 videoSource={slider?.videoSource}
                 cardTitle={slider.title}
                 type={"youtube"}
@@ -134,9 +135,10 @@ export const Carousal = ({ type }: CarousalProps) => {
               />
             </SwiperSlide>
           ))}
-          {type === "article" && articleArr.map((item ) => (
-            <SwiperSlide>
+          {type === "article" && articleArr.map((item, index) => (
+            <SwiperSlide key={index}>
               <CardsService
+
                 type={"article"}
                 articleLink={item?.Link}
                 articleTitle={item.title}
