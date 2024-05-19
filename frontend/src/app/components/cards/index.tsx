@@ -10,9 +10,10 @@ interface CardsProps {
   articleLink?:string
   articleTitle?:string
   articleDescription?:string
+  key?:any
 }
 
-export const CardsService = ({ videoSource, cardTitle, type, cardDescription,articleLink,articleTitle,articleDescription }: CardsProps) => {
+export const CardsService = ({ videoSource, cardTitle, type, cardDescription,articleLink,articleTitle,articleDescription,key }: CardsProps) => {
   return (
     <>
       {type === "youtube" && <Card variant="outlined" className="cards"
