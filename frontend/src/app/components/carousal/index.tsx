@@ -124,10 +124,9 @@ export const Carousal = ({ type }: CarousalProps) => {
             },
           }}
         >
-          {type === "youtube" && sliderArr.map((slider, index) => (
+          {type === "youtube" && sliderArr.map((slider) => (
             <SwiperSlide>
               <CardsService
-              key={index}
                 videoSource={slider?.videoSource}
                 cardTitle={slider.title}
                 type={"youtube"}
@@ -135,10 +134,9 @@ export const Carousal = ({ type }: CarousalProps) => {
               />
             </SwiperSlide>
           ))}
-          {type === "article" && articleArr.map((item, index) => (
+          {type === "article" && articleArr.map((item ) => (
             <SwiperSlide>
               <CardsService
-              key={index}
                 type={"article"}
                 articleLink={item?.Link}
                 articleTitle={item.title}
