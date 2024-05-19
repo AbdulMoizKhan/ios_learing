@@ -7,7 +7,7 @@ import "swiper/swiper-bundle.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IOS Learning Center | Courses",
+  title: "IZAFA TECH",
   description: "IOS Courses",
 };
 

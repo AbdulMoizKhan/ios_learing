@@ -8,22 +8,22 @@ import {
   IconButton,
   Container,
   Button,
+  List,
+  ListItem,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-// import TextButton from '../../components/text-button';
-import header_logo from '../../assests/header_logo.png'
 import TextButton from "../text-button";
 import Image from "next/image";
-// import { Link } from "react-router-dom";
+import logo from "../../../../public/logo.jpg";
 
 const TextLinks = [
-  { title: "Enroll", url: "/" },
-  { title: "Testimonials", url: "/aboutus" },
-  { title: "Course Insights", url: "/how-it-works" },
-  { title: "About", url: "/services" },
-  { title: "Contact Us", url: "/how-it-works" }
+  { title: "Enroll", id: "/" },
+  { title: "Testimonials", id: "Experiences" },
+  { title: "Course Insights", id: "YoutubeVidos" },
+  { title: "Article", id: "Article" },
+  { title: "Contact Us", id: "Contactus" }
 ];
 
 const wrapper: SxProps = {
@@ -57,6 +57,13 @@ const drawerBtn: SxProps = {
     md: "none",
     xs: "flex",
   },
+  color: "white",
+};
+const drawerItems: SxProps = {
+  // borderBottom: "1px solid #4b4040",
+  padding: "15px 20px",
+  display: "block",
+  textAlign: "center",
 };
 // const closeBtn = (variant: string | null | undefined): SxProps => {
 //   return {
@@ -72,9 +79,7 @@ const drawerBtn: SxProps = {
 // };
 
 export const Header = () => {
-  // const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  // const location = usePathname();
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -89,7 +94,7 @@ export const Header = () => {
             alignItems={"center"}
             justifyContent={"space-between"}
           >
-            <Image src={header_logo} alt="" style={{
+            <Image src={logo} alt="" style={{
               width: '162px',
               height: '38px',
               marginTop: '11px',
@@ -107,7 +112,7 @@ export const Header = () => {
                   <TextButton
                     title={text.title}
                     hoverColor={"tomato"}
-                    redirectLink={text.url}
+                    id={text.id}
                     key={text.title}
                   />
                 );
@@ -131,7 +136,7 @@ export const Header = () => {
                   width: "100%",
                 },
               }}
-              anchor="right"
+              anchor="top"
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
             >
@@ -145,6 +150,28 @@ export const Header = () => {
                 >
                   <CloseIcon />
                 </IconButton>
+              </Box>
+              <Box>
+                <Box>
+                  <List>
+                    {TextLinks.map((item, index) => (
+                      <ListItem
+                        sx={drawerItems}
+                        onClick={() => setIsDrawerOpen(false)}
+                        key={index}
+                      >
+                        <TextButton
+                          type={"dropdown"}
+                          color={"#000"}
+                          title={item.title}
+                          hoverColor={"tomato"}
+                          id={item.id}
+                          key={item.title}
+                        />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
               </Box>
             </Drawer>
           </Stack>

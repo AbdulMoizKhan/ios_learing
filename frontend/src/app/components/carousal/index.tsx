@@ -86,59 +86,37 @@ const articleArr = [
 
 interface CarousalProps {
   type: string;
+  backgroundColor: string;
+  slidesPerView: any
+  delay:any
 }
 
-export const Carousal = ({ type }: CarousalProps) => {
+export const Carousal = ({ type, backgroundColor, slidesPerView, delay }: CarousalProps) => {
   return (
-    <div style={{ backgroundColor: '#1a1a1a', height: '400px', cursor: 'pointer' }}>
+    <div style={{ backgroundColor: backgroundColor, height: '400px', cursor: 'pointer' }}>
       <Box sx={{ paddingTop: '20px', height: '100%' }} >
-        <Typography align="center" variant="h4" sx={{ fontWeight: '700', paddingBottom: '30px' }}>{type === "youtube" ? "Course Insights" : "Articles"}</Typography>
-
+        <Typography align="center" variant="h4" sx={{ fontWeight: '700', paddingBottom: '30px' }} className={backgroundColor === "white" ? "black" : "white"}>{type === "youtube" ? "Course Insights" : "Articles"}</Typography>
         <Swiper
           centeredSlides={true}
-          autoplay={{ delay: 8000 }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination, Autoplay]}
+          autoplay={delay}
+          style={backgroundColor === "white" ? { background: "white" } : { background: "black" }}
+          pagination={type === "youtube" ? { clickable: true } : false}
+          modules={type === "youtube" ? [Pagination, Autoplay] : [Autoplay]}
           className="mySwiper"
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 90,
-            },
-            // when window width is >= 768px
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            // when window width is >= 1024px
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40
-            },
-            // when window width is >= 1280px
-            1390: {
-              slidesPerView: 3,
-              spaceBetween: 80,
-            },
-          }}
+          breakpoints={slidesPerView}
         >
           {type === "youtube" && sliderArr.map((slider, index) => (
             <SwiperSlide key={index}>
               <CardsService
-
                 videoSource={slider?.videoSource}
                 cardTitle={slider.title}
                 type={"youtube"}
-
               />
             </SwiperSlide>
           ))}
           {type === "article" && articleArr.map((item, index) => (
             <SwiperSlide key={index}>
               <CardsService
-
                 type={"article"}
                 articleLink={item?.Link}
                 articleTitle={item.title}

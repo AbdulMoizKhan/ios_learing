@@ -17,12 +17,13 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
 import { MdCopyright } from "react-icons/md";
 import TextButton from "../../components/text-button";
-// import greylogo from '../../assets/greylogo.png'
+import logo from "../../../../public/logo.jpg";
+import Image from "next/image";
 
 const wrapper: SxProps = {
-  background: '#000',
-  pt:'30px',
-  pl:{xs:'40px'}
+  background: '#2e2e2e',
+  pt: '30px',
+  pl: { xs: '40px' }
 };
 
 export const Footer = () => {
@@ -33,19 +34,19 @@ export const Footer = () => {
       link: "https://www.instagram.com/",
     },
     {
-      icon: <RiFacebookFill  />,
+      icon: <RiFacebookFill />,
       size: "40px",
       link:
         "https://www.facebook.com/",
     },
     {
-      icon: <BsTwitterX  />,
+      icon: <BsTwitterX />,
       size: "40px",
       link:
         "https://www.facebook.com/",
     },
     {
-      icon: <FaLinkedinIn  />,
+      icon: <FaLinkedinIn />,
       size: "40px",
       link:
         "https://www.linkedin.com/",
@@ -76,8 +77,8 @@ export const Footer = () => {
   return (
     <>
       <Box sx={wrapper}>
-      <Container sx={{ px: 0 }}>
-      <Grid container m={2} spacing={{ xs: 1, sm: 3, md: 6 }} mb={8}>
+        <Container sx={{ px: 0 }}>
+          <Grid container m={2} spacing={{ xs: 1, sm: 3, md: 6 }} mb={8}>
             {routes?.map((route) => {
               return (
                 <Grid item xs={6} sm={3} md={2} key={route.title}>
@@ -118,12 +119,11 @@ export const Footer = () => {
               >
                 <Stack direction={"column"} alignItems={"center"} >
                   <Link href="/">
-                    {/* <Image src={greylogo} alt="" className="footor_logo" /> */}
+                    <Image src={logo} alt="" className="footor_logo" style={{ objectFit: 'contain' }} />
                   </Link>
                   <Stack direction={"row"} sx={{
                     position: 'relative',
-                    // top: '-78px',
-                    left: {xs :'-20px'}
+                    left: { xs: '-20px' }
                   }}>
                     {socials?.map((icon, index) => {
                       return (
@@ -166,8 +166,8 @@ export const Footer = () => {
           </Stack>
         </Container>
       </Box>
-      <Box sx={{ background: '#000' }}>
-        <Divider sx={{ borderColor: '#000', margin: '0px 0px 20px 0px', width: "100%" }}></Divider>
+      <Box sx={{ background: '#2e2e2e' }}>
+        <Divider sx={{ borderColor: '#2e2e2e', margin: '0px 0px 20px 0px', width: "100%" }}></Divider>
         <Stack
           width={{ md: "100%" }}
           order={{ md: 1, xs: 2 }}

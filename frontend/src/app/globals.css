@@ -83,11 +83,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #1a1a1a;
+  background: #000000;
 }
 
 a {
@@ -101,10 +102,6 @@ a {
   }
 }
 .checklist_span{
-  color:#fa6927 !important
-}
-
-span{
   color:#fa6927 !important
 }
 
@@ -137,6 +134,8 @@ p{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  /* width: max-content !important;
+  margin: 0px 20px 0px 20px !important; */
 }
 
 .swiper-slide-active {
@@ -144,15 +143,19 @@ p{
 }
 
 .swiper-slide-active .cards {
-  border: 1px #F76680 solid;
+  border: 1px #d6fc3c solid;
 }
 
 .swiper-slide-active .cards .cardhead {
-  color: #F76680 !important;
+  color: #d6fc3c !important;
+}
+
+.swiper-pagination-bullet{
+  background: #191617 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: linear-gradient(225deg, #F76680 0%, #57007B 100%) !important;
+  background: #d6fc3c !important;
 }
 
 .swiper-pagination-bullet {
@@ -212,6 +215,13 @@ p{
   color: #F76680 !important;
 }
 
+.black{
+  color: #000000 !important;
+}
+
+.white{
+  color: #FFFFFF !important;
+}
 .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
   color: black !important;
 }
@@ -242,7 +252,10 @@ p{
 .css-1cf2bii-MuiTypography-root-MuiLink-root {
   color: #57007b !important;
 }
-
+.iframe{
+    width: 100%;
+    height: 225px; /* width="580" height="230"  */
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .footor_logo {
