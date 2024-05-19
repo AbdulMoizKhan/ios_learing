@@ -125,10 +125,10 @@ export const Footer = () => {
                     // top: '-78px',
                     left: {xs :'-20px'}
                   }}>
-                    {socials?.map((icon, iconIndex) => {
+                    {socials?.map((icon, index) => {
                       return (
                         <IconButton
-                          key={`social${iconIndex}`}
+                          key={`social${index}`}
                           className="footer-icons"
                           style={{
                             fontSize: icon.size,

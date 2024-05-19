@@ -4,7 +4,7 @@ import HeroSection from '../hero_section/indx';
 import { Header } from '../header';
 import { Footer } from '../footer';
 import LeadEssentials from '../LeadEssentials';
-import Checklist from '../checklist';
+// import Checklist from '../checklist';
 import Feedback from '../feeback';
 import { Carousal } from '../carousal';
 
