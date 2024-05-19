@@ -21,9 +21,9 @@ import Image from "next/image";
 const TextLinks = [
   { title: "Enroll", url: "/" },
   { title: "Testimonials", url: "/aboutus" },
-  { title: "FAQ", url: "/how-it-works" },
-  { title: "For companies", url: "/services" },
-  { title: "Login", url: "/how-it-works" }
+  { title: "Course Insights", url: "/how-it-works" },
+  { title: "About", url: "/services" },
+  { title: "Contact Us", url: "/how-it-works" }
 ];
 
 const wrapper: SxProps = {

@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material';
 import { theme } from '../theme';
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import "swiper/swiper-bundle.css"; 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

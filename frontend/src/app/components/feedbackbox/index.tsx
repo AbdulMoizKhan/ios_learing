@@ -6,15 +6,15 @@ interface FeedbackBoxProps {
     location: string;
     name: string;
     profession: string;
-    key: number
+    key?: number
 }
-const FeedbackBox = ({ message, location, name, profession , key}: FeedbackBoxProps) => {
+const FeedbackBox = ({ message, location, name, profession, key }: FeedbackBoxProps) => {
     return (
         <>
             <Container>
                 <Box>
-                    <Stack direction={'row'}>
-                        <Box sx={{ width: '30%' }}>
+                    <Stack direction={'row'} justifyContent={'center'}>
+                        <Box sx={{}}>
                             <Stack direction={'column'} alignItems={'center'}>
                                 <Avatar sx={{
                                     marginBottom: '10px',
@@ -22,18 +22,15 @@ const FeedbackBox = ({ message, location, name, profession , key}: FeedbackBoxPr
                                     height: '150px',
                                     width: '150px',
 
-                                }}>H</Avatar>
-                                <Typography variant='h5'>{location} {name}</Typography>
+                                }}>All</Avatar>
+                                <Typography variant='h5'>{name}</Typography>
                                 <Typography variant='h5'>{profession}</Typography>
+                                <Typography variant='h6'>{message}</Typography>
                             </Stack>
-                        </Box>
-                        <Box sx={{ width: '70%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                            <Typography variant='h6'>{message}</Typography>
                         </Box>
                     </Stack>
                 </Box>
             </Container>
-            <Divider sx={{ borderColor: '#303030b0', margin: '40px 0px' }}></Divider>
         </>
     )
 }

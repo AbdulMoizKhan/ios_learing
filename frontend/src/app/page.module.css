@@ -111,6 +111,7 @@
 .checklist_span{
   color:#fa6927 !important
 }
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
