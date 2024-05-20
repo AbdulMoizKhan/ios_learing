@@ -134,8 +134,8 @@ p{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* width: max-content !important;
-  margin: 0px 20px 0px 20px !important; */
+  /* width: max-content !important; */
+  /* margin: 0px 20px 0px 20px !important; */ 
 }
 
 .swiper-slide-active {
@@ -224,6 +224,10 @@ p{
 }
 .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
   color: black !important;
+}
+
+.css-1v9yc47 {
+  padding-left: 40;
 }
 
 /* .css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover{

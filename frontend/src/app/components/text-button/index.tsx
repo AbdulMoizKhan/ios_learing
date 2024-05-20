@@ -27,7 +27,7 @@ const TextButton = ({
         >
           <Typography
             sx={{
-              color: { xs: "black !important",sm:"black !important",lg:"white !important"},
+              color: { xs: "black !important",sm:"black !important",md:'white !important' , lg:"white !important"},
               fontSize: "16px",
               fontWeight: 500,
               cursor: "pointer",

@@ -22,23 +22,18 @@ const HomePage = () => {
                     slidesPerView={{
                         320: {
                             slidesPerView: 1,
-                            spaceBetween: 90,
                         },
                         640: {
                             slidesPerView: 2,
-                            spaceBetween: 90,
                         },
                         768: {
                             slidesPerView: 2,
-                            spaceBetween: 10,
                         },
                         1024: {
                             slidesPerView: 2,
-                            spaceBetween: 50,
                         },
                         1390: {
                             slidesPerView: 3,
-                            spaceBetween: 80,
                         },
                     }}
                     delay={{ delay: 5000 }}
