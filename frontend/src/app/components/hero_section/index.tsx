@@ -31,8 +31,8 @@ const HeroSection = () => {
             <Container sx={{ height: '50vh' , position:'absolute' , zIndex:'1', maxWidth:'100% !important'  }}>
                 <Box sx={heroStack}>
                     <Stack direction={'column'} spacing={3} sx={{ height: '100%', maxWidth:'500px' }} justifyContent={'center'} alignItems={{ xs: "center" }}>
-                        <Typography variant='h5' sx={{ fontWeight: 'bold', color: '#fff' , textAlign:'center' }}>Online training program for iOS developers who want to become
-                            complete senior developers and be one of the most wanted and <span style={{ color: '#d6fc3c' }}>highest-paid iOS devs</span> in the world.</Typography>
+                        <Typography variant='h5' sx={{ fontWeight: 'bold', color: '#fff' , textAlign:'center' }}>At Izafatech, we're dedicated to empowering tech enthusiasts of all ages to become digital superheroes.  
+                        <span style={{ color: '#d6fc3c' }}> "Wow, I built that!"</span>,  we're here to ensure you don’t just learn tech, but love it. Let’s build amazing things and maybe break the internet (just a little)!</Typography>
                         <Button variant="contained" sx={{
                             background: '#d6fc3c',
                             color: '#000',

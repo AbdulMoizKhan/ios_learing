@@ -7,6 +7,7 @@ import LeadEssentials from '../LeadEssentials';
 // import Checklist from '../checklist';
 import Feedback from '../feeback';
 import { Carousal } from '../carousal';
+import FaqSection from '../Faqs';
 
 const HomePage = () => {
     return (
@@ -70,6 +71,8 @@ const HomePage = () => {
             <div id='Experiences'>
                 <Feedback />
             </div>
+            <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
+            <FaqSection/>
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
             <Footer />
         </div>

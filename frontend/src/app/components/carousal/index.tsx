@@ -99,7 +99,7 @@ export const Carousal = ({ type, backgroundColor, slidesPerView, delay }: Carous
         <Swiper
           centeredSlides={true}
           autoplay={delay}
-          loop={true} 
+          loop={true}
           style={backgroundColor === "white" ? { background: "white" } : { background: "black" }}
           pagination={type === "youtube" ? { clickable: true } : false}
           modules={type === "youtube" ? [Pagination, Autoplay] : [Autoplay]}
