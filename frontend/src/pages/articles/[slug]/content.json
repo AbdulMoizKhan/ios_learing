@@ -1,0 +1,246 @@
+{
+    "empowering-user-privacy": {
+        "heading": "ATTrackingManager: Empowering User Privacy (iOS 17.4.0/17.4.1 Challenge/Workaround)",
+        "author": "/attrackingmanager/author.jpg",
+        "authorName": "Abdul Karim Khan",
+        "minRead": "3 min read",
+        "cover": "/attrackingmanager/cover1.png",
+        "publishDate": "May 6, 2024",
+        "newBlog": true,
+        "paragraph":["Introduced with iOS 14.0, Apple’s App Tracking Transparency (ATT) framework, revolutionised user privacy on iOS devices. A key component of this framework is the ATTrackingManager class, which grants users control over how apps track their data for advertising purposes. This article explores the functionalities of ATTrackingManager, its impact on app developers and users, and a specific challenge encountered in iOS versions 17.4.0 and 17.4.1."],
+        "headText": [
+            {
+                "head": "Understanding ATTrackingManager:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Authorization Request:</strong> This class offers the requestTrackingAuthorizationWithCompletionHandler method. When called, it presents a system prompt to the user, asking them to grant or deny authorisation for the app to track their data across other apps and websites owned by third parties like implementing META SDK in our application."
+                    },
+                    {
+                        "text": "<strong>Authorization States:</strong> The trackingAuthorizationStatus property reflects the user's current authorization status. It can return one of four values:"
+                    },
+                    {
+                        "text": "<strong>.authorized:</strong> If the user authorizes access to app-related data for tracking the user or the device."
+                    },
+                    {
+                        "text": "<strong>.denied:</strong> If the user denies authorization to access app-related data for tracking the user or the device."
+                    },
+                    {
+                        "text": "<strong>.restricted:</strong> If authorization to access app-related data for tracking the user or the device has a restricted status."
+                    },
+                    {
+                        "text": "<strong>.notDetermined:</strong> When the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device. (default in previous versions)."
+                    }
+                ]
+            },
+            {
+                "head": "Impact on App Developers and Users:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Privacy-Conscious Development:</strong> ATTrackingManager encourages developers to prioritize user privacy by offering a transparent mechanism for users to control data tracking. This necessitates a shift in advertising strategies, favoring contextual advertising or in-app purchases over user-specific targeting."
+                    },
+                    {
+                        "text": "<strong>Transparency and User Trust:</strong> Implementing ATTrackingManager fosters a culture of transparency with users. By respecting user privacy choices, developers can build trust and enhance user experience."
+                    },
+                    {
+                        "text": "<strong>User Control:</strong> Users have greater control over their data and can choose whether to allow apps to track them for advertising purposes. This empowers them to make informed decisions about their privacy."
+                    }
+                ]
+            },
+            {
+                "head": "The iOS 17.4.0/17.4.1 Challenge:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Initial Default to Denied:</strong> A notable change in iOS 17.4.0 and 17.4.1 is that the default trackingAuthorizationStatus is now .denied instead of .notDetermined when the user hasn't yet responded to the authorization request. This can be a challenge for developers who rely on the initial .notDetermined state to prompt users for authorization."
+                    }
+                ]
+            },
+            {
+                "head": "Results from our testing:",
+                "level": 1,
+                "text": [
+                    "<img src='/attrackingmanager/result.png' alt='example image' />",
+                    "<strong>Initial Default to Denied:</strong> A notable change in iOS 17.4.0 and 17.4.1 is that the default trackingAuthorizationStatus is now .denied instead of .notDetermined when the user hasn't yet responded to the authorization request. This can be a challenge for developers who rely on the initial .notDetermined state to prompt users for authorization."
+                
+            ]
+            },
+            {
+                "head": "Workaround:",
+                "level": 1,
+                "text": [
+                    "<img src='/attrackingmanager/result.png' alt='example image' />",
+                    "Ref: https://forums.developer.apple.com/forums/thread/746432"
+                
+            ]
+            },
+            {
+                "head": "Implications of the Change:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Unexpected Behavior:</strong> Apps that previously functioned based on the initial .notDetermined state might encounter unexpected behavior in iOS 17.4.0/17.4.1. Users might appear to have pre-denied tracking by default, potentially impacting user acquisition and ad revenue for developers."
+                    },
+                    {
+                        "text": "<strong>Code Updates Required:</strong> Developers need to update their code to handle the new default state. This might involve explicitly requesting authorization using requestTrackingAuthorizationWithCompletionHandler and gracefully handling potential user denials."
+                    }
+                ]
+            },
+            {
+                "head": "Recommendations for Developers:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Update Code:</strong> Ensure your app explicitly requests authorization using requestTrackingAuthorizationWithCompletionHandler to avoid assuming a .notDetermined state."
+                    },
+                    {
+                        "text": "<strong>Transparency and User Education:</strong> Clearly communicate to users why you request tracking authorization and how it benefits them (e.g., personalized experiences or ad support)."
+                    },
+                    {
+                        "text": "<strong>Respect User Choice:</strong> Always respect user decisions regarding tracking authorization and provide a positive user experience regardless of their choice."
+                    }
+                ]
+            },
+            {
+                "head": "Looking Ahead:",
+                "level": 1,
+                "text": [
+                    "ATTrackingManager remains a crucial tool for prioritizing user privacy within the mobile app ecosystem. The iOS 17.4.0/17.4.1 change highlights the importance for developers to stay updated with platform changes and adapt their apps accordingly. By embracing privacy-conscious practices and respecting user choices, developers can build trust and create sustainable app experiences."
+                 ]
+            }
+        ],
+        "meta": {
+            "title": "ATTrackingManager: Empowering User Privacy (iOS 17.4.0/17.4.1 Challenge/Workaround)",
+            "description": "Article Post Description",
+            "link": "https://example.com/articles/empowering-user-privacy"
+        }
+    },
+    "introduction-and-user-interaction-guide": {
+        "heading": "Building SwiftUI App for tvOS (2024) | Episode 1: Introduction and User Interaction Guide",
+        "author": "/attrackingmanager/author.jpg",
+        "authorName": "Abdul Karim Khan",
+        "minRead": "3 min read",
+        "cover": "/uiguide1/cover1.png",
+        "publishDate": "Mar 17, 2024",
+        "newBlog": true,
+        "paragraph":["Introduced with iOS 14.0, Apple’s App Tracking Transparency (ATT) framework, revolutionised user privacy on iOS devices. A key component of this framework is the ATTrackingManager class, which grants users control over how apps track their data for advertising purposes. This article explores the functionalities of ATTrackingManager, its impact on app developers and users, and a specific challenge encountered in iOS versions 17.4.0 and 17.4.1."],
+        "headText": [
+            {
+                "head": "Understanding ATTrackingManager:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Authorization Request:</strong> This class offers the requestTrackingAuthorizationWithCompletionHandler method. When called, it presents a system prompt to the user, asking them to grant or deny authorisation for the app to track their data across other apps and websites owned by third parties like implementing META SDK in our application."
+                    },
+                    {
+                        "text": "<strong>Authorization States:</strong> The trackingAuthorizationStatus property reflects the user's current authorization status. It can return one of four values:"
+                    },
+                    {
+                        "text": "<strong>.authorized:</strong> If the user authorizes access to app-related data for tracking the user or the device."
+                    },
+                    {
+                        "text": "<strong>.denied:</strong> If the user denies authorization to access app-related data for tracking the user or the device."
+                    },
+                    {
+                        "text": "<strong>.restricted:</strong> If authorization to access app-related data for tracking the user or the device has a restricted status."
+                    },
+                    {
+                        "text": "<strong>.notDetermined:</strong> When the app can’t determine the user’s authorization status for access to app-related data for tracking the user or the device. (default in previous versions)."
+                    }
+                ]
+            },
+            {
+                "head": "Impact on App Developers and Users:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Privacy-Conscious Development:</strong> ATTrackingManager encourages developers to prioritize user privacy by offering a transparent mechanism for users to control data tracking. This necessitates a shift in advertising strategies, favoring contextual advertising or in-app purchases over user-specific targeting."
+                    },
+                    {
+                        "text": "<strong>Transparency and User Trust:</strong> Implementing ATTrackingManager fosters a culture of transparency with users. By respecting user privacy choices, developers can build trust and enhance user experience."
+                    },
+                    {
+                        "text": "<strong>User Control:</strong> Users have greater control over their data and can choose whether to allow apps to track them for advertising purposes. This empowers them to make informed decisions about their privacy."
+                    }
+                ]
+            },
+            {
+                "head": "The iOS 17.4.0/17.4.1 Challenge:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Initial Default to Denied:</strong> A notable change in iOS 17.4.0 and 17.4.1 is that the default trackingAuthorizationStatus is now .denied instead of .notDetermined when the user hasn't yet responded to the authorization request. This can be a challenge for developers who rely on the initial .notDetermined state to prompt users for authorization."
+                    }
+                ]
+            },
+            {
+                "head": "Results from our testing:",
+                "level": 1,
+                "text": [
+                    "<img src='/attrackingmanager/result.png' alt='example image' />",
+                    "<strong>Initial Default to Denied:</strong> A notable change in iOS 17.4.0 and 17.4.1 is that the default trackingAuthorizationStatus is now .denied instead of .notDetermined when the user hasn't yet responded to the authorization request. This can be a challenge for developers who rely on the initial .notDetermined state to prompt users for authorization."
+                
+            ]
+            },
+            {
+                "head": "Workaround:",
+                "level": 1,
+                "text": [
+                    "<img src='/attrackingmanager/result.png' alt='example image' />",
+                    "Ref: https://forums.developer.apple.com/forums/thread/746432"
+                
+            ]
+            },
+            {
+                "head": "Implications of the Change:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Unexpected Behavior:</strong> Apps that previously functioned based on the initial .notDetermined state might encounter unexpected behavior in iOS 17.4.0/17.4.1. Users might appear to have pre-denied tracking by default, potentially impacting user acquisition and ad revenue for developers."
+                    },
+                    {
+                        "text": "<strong>Code Updates Required:</strong> Developers need to update their code to handle the new default state. This might involve explicitly requesting authorization using requestTrackingAuthorizationWithCompletionHandler and gracefully handling potential user denials."
+                    }
+                ]
+            },
+            {
+                "head": "Recommendations for Developers:",
+                "level": 1,
+                "text": [ ],
+                "undorderdList": [
+                    {
+                        "text": "<strong>Update Code:</strong> Ensure your app explicitly requests authorization using requestTrackingAuthorizationWithCompletionHandler to avoid assuming a .notDetermined state."
+                    },
+                    {
+                        "text": "<strong>Transparency and User Education:</strong> Clearly communicate to users why you request tracking authorization and how it benefits them (e.g., personalized experiences or ad support)."
+                    },
+                    {
+                        "text": "<strong>Respect User Choice:</strong> Always respect user decisions regarding tracking authorization and provide a positive user experience regardless of their choice."
+                    }
+                ]
+            },
+            {
+                "head": "Looking Ahead:",
+                "level": 1,
+                "text": [
+                    "ATTrackingManager remains a crucial tool for prioritizing user privacy within the mobile app ecosystem. The iOS 17.4.0/17.4.1 change highlights the importance for developers to stay updated with platform changes and adapt their apps accordingly. By embracing privacy-conscious practices and respecting user choices, developers can build trust and create sustainable app experiences."
+                 ]
+            }
+        ],
+        "meta": {
+            "title": "ATTrackingManager: Empowering User Privacy (iOS 17.4.0/17.4.1 Challenge/Workaround)",
+            "description": "Article Post Description",
+            "link": "https://example.com/articles/empowering-user-privacy"
+        }
+    }
+}

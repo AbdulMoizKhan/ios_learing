@@ -1,13 +1,11 @@
 import React from 'react';
 import { Container, Divider } from '@mui/material';
-import HeroSection from '../hero_section';
-import { Header } from '../header';
-import { Footer } from '../footer';
-import LeadEssentials from '../LeadEssentials';
-// import Checklist from '../checklist';
-import Feedback from '../feeback';
-import { Carousal } from '../carousal';
-import FaqSection from '../Faqs';
+import { Header } from '@/app/components/header';
+import HeroSection from '@/app/components/hero_section';
+import { Carousal } from '@/app/components/carousal';
+import  Feedback  from '@/app/components/feeback';
+import FaqSection from '@/app/components/Faqs';
+import { Footer } from '@/app/components/footer';
 
 const HomePage = () => {
     return (
@@ -15,7 +13,6 @@ const HomePage = () => {
             <Header />
             <HeroSection />
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
-            {/* <LeadEssentials /> */}
             <div id='YoutubeVidos'>
                 <Carousal
                     type="youtube"
@@ -67,7 +64,6 @@ const HomePage = () => {
                 />
             </div>
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
-            {/* <Checklist /> */}
             <div id='Experiences'>
                 <Feedback />
             </div>

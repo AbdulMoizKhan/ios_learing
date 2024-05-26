@@ -201,6 +201,10 @@ p{
   text-align: center;
 }
 
+.mtop40{
+  margin-top: 40px !important;
+
+}
 .box_image {
   position: absolute;
 }

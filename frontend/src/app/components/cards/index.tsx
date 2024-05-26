@@ -1,6 +1,7 @@
 "use client"; // This must be the first line in the file
 import { Box, Card, Stack, Typography } from "@mui/material"
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface CardsProps {
   videoSource?: any;
@@ -11,9 +12,11 @@ interface CardsProps {
   articleTitle?: string
   articleDescription?: string
   key?: any
+  id?: string
 }
 
-export const CardsService = ({ videoSource, cardTitle, type, cardDescription, articleLink, articleTitle, articleDescription, key }: CardsProps) => {
+export const CardsService = ({ videoSource, cardTitle, type, cardDescription, articleLink, articleTitle, articleDescription, key , id }: CardsProps) => {
+  const router = useRouter()
   return (
     <>
       {type === "youtube" && 
@@ -49,7 +52,8 @@ export const CardsService = ({ videoSource, cardTitle, type, cardDescription, ar
             rowGap: '10px'
           }}
           onClick={() => {
-            window.open(articleLink, '_blank')
+            // window.open(articleLink, '_blank')
+            router.push(`/articles/${id}`)
           }}
         >
           <Box sx={{ padding: '0px 20px' }}>

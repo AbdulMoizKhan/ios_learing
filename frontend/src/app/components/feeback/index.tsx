@@ -22,7 +22,7 @@ const Feedback = () => {
             name: "Luke Jones",
             profession: "iOS Developer",
             Image: person3,
-            message: "0The iOS Lead Essentials has added incredible value to my career. I’m certain I wouldn’t have landed my current role without this program. Thank you, Caio and Mike!"
+            message: "The iOS Lead Essentials has added incredible value to my career. I’m certain I wouldn’t have landed my current role without this program. Thank you, Caio and Mike!"
         }
     ];
 
