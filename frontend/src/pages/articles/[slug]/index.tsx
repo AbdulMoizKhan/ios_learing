@@ -23,6 +23,7 @@ interface BlogPropsInterface {
     headText: {
       head: string;
       text: string[];
+      text2: string[];
       level: 1 | 2 | 3 | 4 | 5;
       undorderdList: {
         text: string;

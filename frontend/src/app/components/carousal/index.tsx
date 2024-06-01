@@ -58,37 +58,37 @@ const articleArr = [
     title: "SPM vs. Cocoapods: The Battle for Package Management Supremacy in Apple App Development",
     description: "Dive into the comparison between Swift Package Manager (SPM) and Cocoapods, evaluating their strengths and weaknesses in Apple app development.",
     Link: 'https://medium.com/@abdulkarimkhaan/spm-vs-cocoapods-the-battle-for-package-management-supremacy-in-apple-app-development-b8e960671f41',
-    id: 'empowering-user-privacy'  
+    id: 'the-battle-for-package-management'  
   },
   {
     title: "The Million Dollar Question for Product Success, Retention vs. Acquisition",
     description: "Analyze the critical aspects of product success by comparing user retention strategies with user acquisition tactics.",
     Link: 'https://medium.com/@abdulkarimkhaan/the-million-dollar-question-for-product-success-retention-vs-acquisition-be0ea0d4ce54',
-    id: 'empowering-user-privacy'
+    id: 'retention-vs-acquisition'
   },
   {
     title: "Exploring LLDB in Xcode: Your Guide to Effective Debugging #Xcode #Debugging #Development",
     description: "Learn how to use LLDB in Xcode for effective debugging, enhancing your development process with practical tips and techniques.",
     Link: 'https://medium.com/@abdulkarimkhaan/exploring-lldb-in-xcode-your-guide-to-effective-debugging-9db37c92cb2a',
-    id: 'empowering-user-privacy'
+    id: 'guide-to-effective-debugging'
   },
   {
     title: "Understanding Structs vs. Classes in Swift: Choosing the Right Data Type",
     description: "Understand the differences between structs and classes in Swift, and learn how to choose the appropriate data type for your project.",
     Link: 'https://medium.com/@abdulkarimkhaan/understanding-structs-vs-classes-in-swift-choosing-the-right-data-type-9078f697b69c',
-    id: 'empowering-user-privacy'
+    id: 'structs-vs-classes'
   },
   {
     title: "Implementing Self-Sizing UICollectionView Cells With AutoLayout in Storyboard",
     description: "Discover how to implement self-sizing UICollectionView cells using AutoLayout in Storyboard, ensuring responsive and dynamic UI designs.",
     Link: 'https://medium.com/@abdulkarimkhaan/implementing-self-sizing-uicollectionview-cells-with-autolayout-in-storyboard-2630a0ccd6d1',
-    id: 'empowering-user-privacy'
+    id: 'self-sizing-uicollectionview-cells'
   },
   {
     title: "Understanding AutoLayout in Swift: Building Responsive User Interfaces",
     description: "Gain insights into using AutoLayout in Swift to build responsive user interfaces that adapt to different screen sizes and orientations.",
     Link: 'https://medium.com/@abdulkarimkhaan/understanding-autolayout-in-swift-building-responsive-user-interfaces-8759030e1f56',
-    id: 'empowering-user-privacy'
+    id: 'autolayout-in-swift'
   },
 ];
 
@@ -100,6 +100,8 @@ interface CarousalProps {
 }
 
 export const Carousal = ({ type, backgroundColor, slidesPerView, delay }: CarousalProps) => {
+  
+  
   return (
     <div style={{ backgroundColor: backgroundColor, height: '400px', cursor: 'pointer' }}>
       <Box sx={{ paddingTop: '20px', height: '100%' }} >

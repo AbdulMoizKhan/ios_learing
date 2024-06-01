@@ -1,7 +1,7 @@
 "use client"; // This must be the first line in the file
 import { Box, Card, Stack, Typography } from "@mui/material"
-import Image from "next/image";
 import { useRouter } from "next/router";
+import content from '../../../pages/articles/[slug]/content.json';
 
 interface CardsProps {
   videoSource?: any;
@@ -17,6 +17,16 @@ interface CardsProps {
 
 export const CardsService = ({ videoSource, cardTitle, type, cardDescription, articleLink, articleTitle, articleDescription, key , id }: CardsProps) => {
   const router = useRouter()
+  console.log('articleLink',articleLink)
+  const handleArticleClick = () => {
+    if (id && content.hasOwnProperty(id)) {
+      router.push(`/articles/${id}`);
+    } else if (articleLink) {
+      window.open(articleLink, '_blank');
+    } else {
+      // console.warn('if anyother we want to perform later');
+    }
+  };
   return (
     <>
       {type === "youtube" && 
@@ -51,10 +61,7 @@ export const CardsService = ({ videoSource, cardTitle, type, cardDescription, ar
             justifyContent: 'center',
             rowGap: '10px'
           }}
-          onClick={() => {
-            // window.open(articleLink, '_blank')
-            router.push(`/articles/${id}`)
-          }}
+          onClick={handleArticleClick}
         >
           <Box sx={{ padding: '0px 20px' }}>
             <Stack direction={"column"} spacing={2}>

@@ -16,6 +16,7 @@ interface BlogLayoutProps {
         headText: {
             head: string;
             text: string[];
+            text2: string[];
             level: 1 | 2 | 3 | 4 | 5;
             undorderdList: {
                 text: string;
@@ -52,7 +53,7 @@ const ArticleLayout = ({ data }: BlogLayoutProps) => {
                             <Typography variant="subtitle1">{data.minRead} - {data.publishDate}</Typography>
                         </Box>
                     </Box>
-                    <img src={data.cover} alt="Cover" className="mtop40"/>
+                    <Image src={data.cover} alt="Cover" className="mtop40" width={700} height={350}/>
                     <Typography variant="body1" className="mtop40">{data.paragraph}</Typography>
                     {data.headText.map((section, index) => (
                         <Box key={index}>
@@ -71,9 +72,22 @@ const ArticleLayout = ({ data }: BlogLayoutProps) => {
                                     </ListItem>
                                 ))}
                             </List>
+                            {section?.text2?.map((paragraph, index) => (
+                                <Typography key={index} variant="body1" dangerouslySetInnerHTML={{ __html: paragraph }} />
+                            ))}
+                            <List>
+                                {section?.undorderdList2?.map((list, index) => (
+                                    <ListItem key={index} sx={{ display: 'list-item', padding: 0 , listStyle:'disc'}}>
+                                        <ListItemText
+                                            primary={
+                                                <Typography variant="body1" dangerouslySetInnerHTML={{ __html: list.text }} />
+                                            }
+                                        />
+                                    </ListItem>
+                                ))}
+                            </List>
                         </Box>
                     ))}
-                    {/* Render other properties as needed */}
                 </Box>
             </Container>
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
