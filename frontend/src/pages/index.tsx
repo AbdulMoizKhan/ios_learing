@@ -3,7 +3,7 @@ import { Container, Divider } from '@mui/material';
 import { Header } from '@/app/components/header';
 import HeroSection from '@/app/components/hero_section';
 import { Carousal } from '@/app/components/carousal';
-import  Feedback  from '@/app/components/feeback';
+import Feedback from '@/app/components/feeback';
 import FaqSection from '@/app/components/Faqs';
 import { Footer } from '@/app/components/footer';
 
@@ -20,21 +20,30 @@ const HomePage = () => {
                     slidesPerView={{
                         320: {
                             slidesPerView: 1,
+                            spaceBetween: 10,
                         },
                         640: {
                             slidesPerView: 2,
+                            spaceBetween: 20,
                         },
                         768: {
                             slidesPerView: 2,
+                            spaceBetween: 40,
                         },
                         1024: {
                             slidesPerView: 2,
+                            spaceBetween: 50,
                         },
                         1390: {
                             slidesPerView: 3,
+                            spaceBetween: 50,
                         },
                     }}
-                    delay={{ delay: 5000 }}
+                    delay={{
+                        delay: 5000,
+                        disableOnInteraction: true,
+                        pauseOnMouseEnter: true
+                    }}
                 />
             </div>
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
@@ -68,7 +77,7 @@ const HomePage = () => {
                 <Feedback />
             </div>
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
-            <FaqSection/>
+            <FaqSection />
             <Divider sx={{ borderColor: '#000', margin: '40px 0px' }} />
             <Footer />
         </div>

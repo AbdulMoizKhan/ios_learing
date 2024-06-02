@@ -31,7 +31,7 @@ export const Footer = () => {
     {
       icon: <IoLogoInstagram />,
       size: "40px",
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/izafatech/",
     },
     {
       icon: <RiFacebookFill />,
