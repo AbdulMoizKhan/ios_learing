@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - npm install
+    - npm run build
+    - rsync -a .next/ /home/username/public_html/
+    - rsync -a public/ /home/username/public_html/
+    - rsync -a *.json /home/username/public_html/
+    - rsync -a *.js /home/username/public_html/
+    - rsync -a node_modules/ /home/username/public_html/node_modules/
