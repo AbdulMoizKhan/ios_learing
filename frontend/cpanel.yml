@@ -1,10 +1,12 @@
 ---
 deployment:
   tasks:
+    - cd frontend
     - npm install
     - npm run build
-    - rsync -a .next/ /home/username/public_html/
-    - rsync -a public/ /home/username/public_html/
-    - rsync -a *.json /home/username/public_html/
-    - rsync -a *.js /home/username/public_html/
+    - mkdir -p /home/username/public_html/
+    - rsync -a .next/ /home/username/public_html/.next/
+    - rsync -a public/ /home/username/public_html/public/
+    - rsync -a next.config.mjs /home/username/public_html/
+    - rsync -a package.json /home/username/public_html/
     - rsync -a node_modules/ /home/username/public_html/node_modules/
